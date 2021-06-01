@@ -8,10 +8,10 @@
   }
   
 
-    $servidor = "127.0.0.1";
-    $usuario = "root";
-    $senha = "";
-    $dbname = "tcc";
+    $servidor = "sql10.freesqldatabase.com";
+    $usuario = "sql10416479";
+    $senha = "IppyjTmF85";
+    $dbname = "sql10416479";
     $conn = mysqli_connect($servidor, $usuario, $senha, $dbname) or die (mysqli_error());
     
 ?>
