@@ -1,4 +1,5 @@
 <?php
+
 $morador = $_POST['morador'];
 
     if ($morador == 'sim') {

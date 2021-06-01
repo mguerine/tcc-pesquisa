@@ -50,7 +50,7 @@
 									<p><p>Esse projeto visa a coleta de dados e análise da qualidade de letramento dos moradores de Arraial do Cabo. A nossa intenção é registrar as taxas de analfabetismo funcional de acordo com alguns padrões como: gênero, idade e renda 
 familiar, identificando os grupos com maiores as taxas e incentivando novas abordagens.</p>
                                                                         <p>O teste aplicado foi o TLS (Teste de Letramento em Saúde) que é uma adaptação transcultural para a língua portuguesa do Brasil, a partir do Test of Functional Health Literacy in Adults (TOFHLA). De acordo com o Jornal da Usp, 
-                                                                            esse teste se mostrou eficaz para avaliar o desempenho cognitivo entre os adultos (mais informações, <a href= http://www.usp.br/agen/?p=23728 target=_blank > clique aqui</a>).</p>
+                                                                            esse teste se mostrou eficaz para avaliar o desempenho cognitivo entre os adultos (mais informações em: <a href= http://www.usp.br/agen/?p=23728.>http://www.usp.br/agen/?p=23728.</a></p>
                                                                         
 								</div>
 
@@ -62,8 +62,8 @@ familiar, identificando os grupos com maiores as taxas e incentivando novas abor
 					<footer class="wrapper style1 align-center">
 						<div class="inner">
 							<ul class="icons">
-								<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://linktr.ee/TccPesquisa" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+								
                                                                 <p>&copy; TCC Pesquisa - IFRJ - Arraial do Cabo. Design: <a href="https://html5up.net">HTML5 UP</a></p>
 								
 							</ul></p>

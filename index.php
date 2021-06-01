@@ -1,10 +1,6 @@
 
 <!DOCTYPE HTML>
-<!--
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Pesquisa</title>
@@ -98,8 +94,8 @@
 				<div class="inner">
 					<ul class="icons">
 						
-						<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://linktr.ee/TccPesquisa" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+						
 					</ul>
 					<p></a>.</p>
 				</div>
@@ -115,14 +111,7 @@
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
                 
-                <?php
-                    $host = "127.0.0.1";
-                    $user = "";
-                    $password = "";
-                    $banco = "";
-                    $link = mysqli_connect($host, $user, $password) or die (mysqli_error());
-                    $db = mysqli_select_db($banco);
-                ?>
+
 	</body>
 </html>
 

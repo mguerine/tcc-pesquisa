@@ -1,10 +1,6 @@
 <?php declare(strict_types=1) ?>
 <!DOCTYPE HTML>
-<!--
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Análise de Perfil</title>
@@ -41,19 +37,21 @@
 						<h1>Parte 1: Análise de perfil</h1>
 						<hr>
 						<section>
+                                                    
 							<div class="content">
+                                                            
                                                                 
-								<form method="post" action="parte2_autoanalise.php">
+                                                            <form method="post" action="processa1.php">
 									<div class="fields">
                                                                             
+                                                                                
                                                                                 <?php
-
                                                                                     //$data_atual = date("d-m-Y h:i:s");
                                                                                     //$data_final = date("2021-05-22");
                                                                                     //$diferenca = strtotime($data_final) – strtotime($data_atual);
                                                                                     //echo ($diferenca >= 0) ? $diferenca : 0;
-                                                                                    
-                                                                                ?>
+                                                                                ?>   
+                                                                                
 										<div class="field half">
 											<label for="name"><h3>Nome</h3></label>
 											<input type="text" name="nome" id="name" value="" required/>
@@ -61,7 +59,7 @@
 
 										<div class="field half">
 											<label for="email"><h3>E-mail</h3></label>
-											<input type="email" name="email" id="email" value="" required />
+											<input type="email" name="email" id="email" value="" />
 										</div>	
 										<div class="field">
 											<label for="department"><h3>Gênero</h3></label>
@@ -71,11 +69,11 @@
 											<label>-</label>
 										</div>
 										<div class="field quarter">
-											<input type="radio" id="genero_f" name="genero" required/>
+											<input type="radio" value="Feminino" id="genero_f" name="genero" required/>
 											<label for="genero_f">Feminino</label>
 										</div>
 										<div class="field quarter">
-											<input type="radio" id="genero_m" name="genero" />
+                                                                                    <input type="radio" value="Masculino" id="genero_m" name="genero" />
 											<label for="genero_m">Masculino</label>
 										</div>
 										<div class="field quarter" style="visibility:hidden;">
@@ -84,180 +82,95 @@
 										</div>
 										
 										<div class="field">
-											<label for="bairro"><h3>Bairro</h3></label>
+											<h3><label for="bairro">Bairro</label></h3>
 											<select name="bairro" id="bairro" required>
 													<option disabled selected value> -- Escolha uma opção -- </option>
-													<option value="1">Prainha</option> 
-													<option value="2">Praia dos Anjos</option> 
-													<option value="3">Praia Grande</option> 
-													<option value="4">Centro</option>
-													<option value="5">Canaã</option>
-													<option value="6">Vila Industrial</option>
-													<option value="7">Macedônia</option>
-													<option value="8">Sítio</option>  
-                                                                                                        <option value="9">Pontal do Atalaia</option>  
-													<option value="10">Morro da Cabocla</option>
-													<option value="11">Morro da Boa Vista</option>
-													<option value="12">Outros</option>
+													<option value="Prainha">Prainha</option> 
+													<option value="PDA">Praia dos Anjos</option> 
+													<option value="PG">Praia Grande</option> 
+													<option value="Centro">Centro</option>
+													<option value="Canaã">Canaã</option>
+													<option value="Vila">Vila Industrial</option>
+													<option value="QQ">Macedônia</option>
+													<option value="Sítio">Sítio</option>  
+                                                                                                        <option value="Pontal">Pontal do Atalaia</option>  
+													<option value="Morro da Coca">Morro da Cabocla</option>
+													<option value="Boa Vista">Morro da Boa Vista</option>
+													<option value="Outros">Outros</option>
 											</select>
 										</div>
 
 										<div class="field">
-											<label for="department"><h3>Idade</h3></label>
-											<input type="radio" id="idadea" name="idade" required />
-											<label for="idadea">Entre 10 e 17 anos</label>
+                                                                                    <h3><label for="department" >Idade</label></h3>
+											<input type="radio" value="10a17" id="10a17" name="idade" required />
+											<label for="10a17">Entre 10 e 17 anos</label>
 										</div>
                                                                                 <div class="field">
-											<input type="radio" id="idadeb" name="idade" />
-											<label for="idadeb">Entre 18 e 24 anos</label>
+											<input type="radio" value="18a24" id="18a24" name="idade" />
+											<label for="18a24">Entre 18 e 24 anos</label>
 										</div>
 										<div class="field">
-											<input type="radio" id="idadeb" name="idade" />
-											<label for="idadec">Entre 25 e 34 anos</label>
+											<input type="radio" value="25a34" id="25a34" name="idade" />
+											<label for="25a34">Entre 25 e 34 anos</label>
 										</div>
 										<div class="field">
-											<input type="radio" id="idadec" name="idade" />
-											<label for="idaded">Entre 35 e 59 anos</label>
+											<input type="radio" value="35a59" id="35a59" name="idade" />
+											<label for="35a59">Entre 35 e 59 anos</label>
 										</div>
 										<div class="field">
-											<input type="radio" id="idaded" name="idade" />
-											<label for="idadee">60 anos ou mais &nbsp;&nbsp;</label>
+											<input type="radio" value="60mais" id="60mais" name="idade" />
+											<label for="60mais">60 anos ou mais &nbsp;&nbsp;</label>
 										</div>
-										<div class="field">
-											<label for="name"><h4>Não sabe a sua idade? Digite o ano de nascimento que está em seu documento:</h4></label>
-											<input type="text" name="nsidade" id="name" value=""/>    
-										</div>
+										
+								
 
 										<div class="field">
-											<label for="autodec"><h3>Você se considera:</h3></label>
+											<label for="autodec" value="autodec"><h3>Você se considera:</h3></label>
 										</div>
 
 										<div class="field third">
-											<input type="radio" id="negro" name="autodec" required />
+											<input type="radio" id="negro" value="negro" name="etnia" required />
 											<label for="negro">Negro </label>
 										</div>
 										<div class="field third">
-											<input type="radio" id="indigena" name="autodec" />
+											<input type="radio" id="indigena" value="indígena" name="etnia" />
 											<label for="indigena">Indígena </label>
 										</div>
 										<div class="field third">
-											<input type="radio" id="pardo" name="autodec" />
+											<input type="radio" id="pardo" value="pardo" name="etnia" />
 											<label for="pardo">Pardo </label>
 										</div>
 										<div class="field half">
-											<input type="radio" id="branco" name="autodec" />
+											<input type="radio" id="branco" value="branco" name="etnia" />
 											<label for="branco">Branco </label>
 										</div> 
 										<div class="field half">
-											<input type="radio" id="outros" name="autodec" />
+											<input type="radio" id="outros" value="outros" name="etnia" />
 											<label for="outros">Outros </label>
 										</div> 
 										<div class="field">
 											<label for="department"><h3>Nível de escolaridade</h3></label> 
-                                                                                        <select class="select-escolaridade" name="escolaridade" id="escolaridade" required>
+                                                                                        <select class="select-escolaridade" value="escolaridade" name="escolaridade" id="escolaridade" required>
 												<option disabled selected value> -- Escolha uma opção -- </option>
-												<option value="escolaridade1">Ensino fundamental incompleto</option> 
-												<option value="escolaridade2">Ensino fundamental completo</option> 
-												<option value="escolaridade3">Ensino médio incompleto</option> 
-												<option value="escolaridade4">Ensino médio completo</option>                                                                                  
-												<option value="escolaridade5">Graduação</option>
-												<option value="escolaridade6">Pós-graduação</option>
-												<option value="escolaridade7">Mestrado</option>
-												<option value="escolaridade8">Doutorado</option> 
-												<option value="escolaridade9">Pós-doutorado</option>
+												<option value="EFincompleto">Ensino fundamental incompleto</option> 
+												<option value="EFcompleto">Ensino fundamental completo</option> 
+												<option value="EMincompleto">Ensino médio incompleto</option> 
+												<option value="EMcompleto">Ensino médio completo</option>                                                                                  
+												<option value="Graduação">Graduação</option>
+												<option value="Pós-graduação">Pós-graduação</option>
+												<option value="Mestrado">Mestrado</option>
+												<option value="Doutorado">Doutorado</option> 
+												<option value="Pós-doutorado">Pós-doutorado</option>
 											</select>
 										</div>
 
-										
-										                                                                                                                                                   
-                                                                                <div class="field escolaridade" id="escolaridade1" style="display:none;">
-											<label for="department">Selecione xxxTODAS as escolas que você já estudou</label> 
-											<select name="escola1" id="escola1">    
-                                                                                                <option disabled selected value> -- Escolha uma opção -- </option>
-                                                                                                <option value="fp">CM Francisco Porto de Aguiar </option>
-												<option value="ce">CENAQ</option> 
-												<option value="cb">Ciep Brizolão</option> 
-												<option value="emjp">EM João Torres</option> 
-												<option value="abj">EM Adolpho Beranger Júnior</option>
-												<option value="cb">Instituto Ágape</option> 
-												<option value="cb">Instituto MGP</option> 
-												<option value="cb">SOSEC</option>
-												<option value="cb">Outras dentro de Arraial</option>
-												<option value="cb">Outras fora de Arraial</option>   
-											</select>                                                                                                                                                                               
-										</div>
-										
-																		
-										     
-										<div class="field escolaridade" id="escolaridade2" style="display:none;">
-											<label for="department">Selecione TODAS as escolas que você já estudou</label> 
-											<select name="escola2" id="escola2">  
-                                                                                            <option disabled selected value> -- Escolha uma opção -- </option>
-                                                                                            <option value="fp">CM Francisco Porto de Aguiar</option>
-                                                                                            <option value="ce">CENAQ</option> 
-                                                                                            <option value="cb">Ciep Brizolão</option> 
-                                                                                            <option value="emjp">EM João Torres</option> 
-                                                                                            <option value="abj">EM Adolpho Beranger Júnior</option>
-                                                                                            <option value="cb">Instituto Ágape</option> 
-                                                                                            <option value="cb">Instituto MGP</option> 
-                                                                                            <option value="cb">SOSEC</option>
-                                                                                            <option value="cb">Outras dentro de Arraial</option>
-                                                                                            <option value="cb">Outras fora de Arraial</option>     
-											</select>                                                                                                                                                        
-										</div>
-                                                                                <div class="field escolaridade" id="escolaridade3" style="display:none;">
-                                                                                    <label for="department">Selecione TODAS as escolas que você já estudou</label> 
-                                                                                    <select name="escola3" id="escola3">
-                                                                                        <option disabled selected value> -- Escolha uma opção -- </option>
-                                                                                        <option value="fv">CE Almirante Frederico Villar</option> 
-                                                                                        <option value="vj">CE Vinte de Julho</option>
-                                                                                        <option value="fp">CM Francisco Porto de Aguiar</option>
-                                                                                        <option value="ce">CENAQ</option> 
-                                                                                        <option value="cj">CEJA</option>
-                                                                                        <option value="cb">Ciep Brizolão</option> 
-                                                                                        <option value="emjp">EM João Torres</option> 
-                                                                                        <option value="abj">EM Adolpho Beranger Júnior</option>
-                                                                                        <option value="cb">IFRJ</option> 
-                                                                                        <option value="cb">Instituto Ágape</option> 
-                                                                                        <option value="cb">Instituto MGP</option> 
-                                                                                        <option value="cb">SOSEC</option>
-                                                                                        <option value="cb">Outras dentro de Arraial</option>
-                                                                                        <option value="cb">Outras fora de Arraial</option>   
-                                                                                    </select>                                                                                                                                                                                   
-										</div>
-									
-												
-										      
-											<div class="field escolaridade" id="escolaridade4" style="display:none;">
-											<label for="department">Selecione TODAS as escolas que você já estudou</label> 
-											<select name="escola3" id="escola3">
-                                                                                                <option disabled selected value> -- Escolha uma opção -- </option>
-												<option value="fv">CE Almirante Frederico Villar</option> 
-												<option value="vj">CE Vinte de Julho</option>
-												<option value="fp">CM Francisco Porto de Aguiar</option>
-												<option value="ce">CENAQ</option> 
-												<option value="cj">CEJA</option>
-                                                                                                <option value="cb">Ciep Brizolão</option> 
-												<option value="emjp">EM João Torres</option> 
-												<option value="abj">EM Adolpho Beranger Júnior</option>
-												<option value="cb">IFRJ</option> 
-												<option value="cb">Instituto Ágape</option> 
-												<option value="cb">Instituto MGP</option> 
-												<option value="cb">SOSEC</option>
-												<option value="cb">Outras dentro de Arraial</option>
-												<option value="cb">Outras fora de Arraial</option>   
-											</select>                                                                                                                                                                                   
-											</div>
-									
-										
-
 										<div class="field">
 											<label for="department"><h3>Renda familiar (por mês)</h3></label> 
-											<select name="rendafam" id="rendafam" required>
+											<select name="renda_familiar" id="rendafam" required>
 												<option disabled selected value> -- Escolha uma opção -- </option>
-												<option value="fv">De 0 a 1 salário mínimo (até R$1.100)</option> 
-												<option value="vj">Entre 1 e 3 salários mínimos (de R$1101 até R$3300)</option>
-												<option value="fp">Mais de 3 salários mínimos (de R$3400 pra cima)</option>
+												<option value="0 a 1">De 0 a 1 salário mínimo (até R$1.100)</option> 
+												<option value="1 a 3">Entre 1 e 3 salários mínimos (de R$1101 até R$3300)</option>
+												<option value="mais de 3">Mais de 3 salários mínimos (de R$3400 pra cima)</option>
 											</select>        
 										</div>
 										<div class="field">
@@ -283,8 +196,8 @@
 					<div class="inner">
 						<ul class="icons">
 							
-							<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://linktr.ee/TccPesquisa" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+							
 						</ul>
 						<p>&copy; &copy; TCC Pesquisa - IFRJ - Arraial do Cabo. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</div>

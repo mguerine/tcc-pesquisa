@@ -1,9 +1,15 @@
 <!DOCTYPE HTML>
-<!--
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
+<?php
+session_start();
+    if(!isset($_SESSION['id_unico'])){
+        
+        header('Location: index.php');
+        exit();
+  }
+  
+?>
+
 <html>
 	<head>
 		<title>Parte 2 - Autoanálise</title>
@@ -41,21 +47,21 @@
 						<hr>
 						<section>
 							<div class="content">
-								<form method="post" action="parte3_teste.php">
+                                                            <form method="post" action="processa2.php">
 									<div class="fields">
 										<div class="field">
-											<label for="department"><h3>Você acha que entende tudo que é explicado nos jornais?</h3></label>
+											<h3><label for="department" value="quest1">Você acha que entende tudo que é explicado nos jornais?</label></h3>
 										</div>
 										<div class="field quarter" style="visibility:hidden;">
 											<input type="radio" />
 											<label>-</label>
 										</div>
-                                        <div class="field quarter">
-											<input type="radio" id="txtq1_s" name="txtq1" required />
+                                                                                <div class="field quarter">
+                                                                                    <input type="radio" value="Sim" id="txtq1_s" name="txtq1" required />
 											<label for="txtq1_s">Sim</label>
 										</div>
 										<div class="field quarter">
-											<input type="radio" id="txtq1_n" name="txtq1" />
+                                                                                    <input type="radio" value="Não" id="txtq1_n" name="txtq1" />
 											<label for="txtq1_n">Não </label>
 										</div>
 										<div class="field quarter" style="visibility:hidden;">
@@ -64,69 +70,69 @@
 										</div>
 
 										<div class="field">
-											<label for="department"><h3>Você se sente seguro para preencher formulários ou fichas sozinho(a)?</h3></label>
+											<h3><label for="department" value="quest2">Você se sente seguro para preencher formulários ou fichas sozinho(a)?</label></h3>
 										</div>
 
-                                        <div class="field">
-											<input type="radio" id="txtq2_s" name="txtq2" required />
+                                                                                <div class="field">
+                                                                                    <input type="radio" value="Sim" id="txtq2_s" name="txtq2" required />
 											<label for="txtq2_s">Sim, resolvo meus documentos sempre sozinho (a).</label>
 										</div>
 										<div class="field">
-											<input type="radio" id="txtq2_n" name="txtq2" />
+                                                                                    <input type="radio" value="Não" id="txtq2_n" name="txtq2" />
 											<label for="txtq2_n">Não, tenho medo de errar e costumo pedir ajuda. &nbsp; &nbsp; </label>
 										</div>
 										<div class="field">
-											<label for="department"><h3>Qual é o seu grau de dificuldade ao ler um texto?</h3></label>
+											<label for="department" value="quest3"><h3>Qual é o seu grau de dificuldade ao ler um texto?</h3></label>
 										</div>
 										<div class="field">
-											<input type="radio" id="txtq3_a" name="txtq3" required />
+											<input type="radio" value="Rápido" id="txtq3_a" name="txtq3" required />
 											<label for="txtq3_a">Leio rápido e com facilidade.</label>
 										</div>
 										<div class="field">
-											<input type="radio" id="txtq3_b" name="txtq3" />
+                                                                                    <input type="radio" value="devagar" id="txtq3_b" name="txtq3" />
 											<label for="txtq3_b">Leio devagar mas entendo bem.</label>
 										</div>
 										<div class="field">
-											<input type="radio" id="txtq3_c" name="txtq3" />
+                                                                                    <input type="radio" value="dificuldade" id="txtq3_c" name="txtq3" />
 											<label for="txtq3_c">Tenho dificuldades em ler e mais ainda para entender a mensagem.  </label>
 										</div>
 										<div class="field">
-											<input type="radio" id="txtq3_d" name="txtq3" />
+                                                                                    <input type="radio" value="pede_ajuda" id="txtq3_d" name="txtq3" />
 											<label for="txtq3_d">Leio bem devagar e costumo pedir ajuda. &nbsp; &nbsp;  </label>
 										</div>  
 										<div class="field">
-											<label for="department"><h3>Costuma pedir ajuda para escrever uma mensagem?</h3></label>
+											<label for="department" value="quest4"><h3>Costuma pedir ajuda para escrever uma mensagem?</h3></label>
 										</div> 
 										<div class="field half">
-											<input type="radio" id="txtq4_a" name="txtq4" required />
+                                                                                    <input type="radio" value="nunca" id="txtq4_a" name="txtq4" required />
 											<label for="txtq4_a">Nunca</label>
 										</div>
 										<div class="field half">
-											<input type="radio" id="txtq4_b" name="txtq4" />
+                                                                                    <input type="radio" value="as_vezes" id="txtq4_b" name="txtq4" />
 											<label for="txtq4_b">Às vezes </label>
 										</div>
 										<div class="field half">
-											<input type="radio" id="txtq4_c" name="txtq4" />
+                                                                                    <input type="radio" value="quaase_sempre" id="txtq4_c" name="txtq4" />
 											<label for="txtq4_c">Quase sempre </label>
 										</div>
 										<div class="field half">
-											<input type="radio" id="txtq4_d" name="txtq4" />
+                                                                                    <input type="radio" value="sempre" id="txtq4_d" name="txtq4" />
 											<label for="txtq4_d">Sempre peço </label>
 										</div>        
 
 										<div class="field">
-											<label for="department"><h3>Algum membro de sua família (ou até mesmo você) precisou interromper os estudos para trabalhar?</h3></label>
+											<label for="department" value="quest5"><h3>Algum membro de sua família (ou até mesmo você) precisou interromper os estudos para trabalhar?</h3></label>
 										</div>      
 										<div class="field quarter" style="visibility:hidden;">
 											<input type="radio" />
 											<label>-</label>
 										</div>  
 										<div class="field quarter">
-											<input type="radio" id="txtq5_s" name="txtq5" required />
+                                                                                    <input type="radio" value="sim" id="txtq5_s" name="txtq5" required />
 											<label for="txtq5_s">Sim</label>
 										</div>
 										<div class="field quarter">
-											<input type="radio" id="txtq5_n" name="txtq5" />
+                                                                                    <input type="radio" value="não" id="txtq5_n" name="txtq5" />
 											<label for="txtq5_n">Não </label>
 										</div>
 										<div class="field quarter" style="visibility:hidden;">
@@ -135,18 +141,18 @@
 										</div>
 
 										<div class="field">
-											<label for="department"><h3>Alguém da sua família já concluiu o ensino superior?</h3></label>
+											<label for="department" value="quest6"><h3>Alguém da sua família já concluiu o ensino superior?</h3></label>
 										</div>
 										<div class="field quarter" style="visibility:hidden;">
 											<input type="radio" />
 											<label>-</label>
 										</div>
 										<div class="field quarter">
-											<input type="radio" id="txtq6_s" name="txtq6" required />
+											<input type="radio" value="Sim"  id="txtq6_s" name="txtq6" required />
 											<label for="txtq6_s">Sim</label>
 										</div>
 										<div class="field quarter">
-											<input type="radio" id="txtq6_n" name="txtq6" />
+											<input type="radio" value="Não" id="txtq6_n" name="txtq6" />
 											<label for="txtq6_n">Não </label>
 										</div>
 										<div class="field quarter" style="visibility:hidden;">
@@ -155,18 +161,18 @@
 										</div>
 
 										<div class="field">
-											<label for="department"><h3>Você possui o hábito de ler (livros jornais, revistas etc)?</h3></label>
+											<label for="department" value="quest7"><h3>Você possui o hábito de ler (livros jornais, revistas etc)?</h3></label>
 										</div>
 										<div class="field quarter" style="visibility:hidden;">
 											<input type="radio" />
 											<label>-</label>
 										</div>
 										<div class="field quarter">
-											<input type="radio" id="txtq7_s" name="txtq7" required />
+											<input type="radio" value="sim" id="txtq7_s" name="txtq7" required />
 											<label for="txtq7_s">Sim</label>
 										</div>
 										<div class="field quarter">
-											<input type="radio" id="txtq7_n" name="txtq7" />
+											<input type="radio" value="não" id="txtq7_n" name="txtq7" />
 											<label for="txtq7_n">Não </label>
 										</div>
 										<div class="field quarter" style="visibility:hidden;">
@@ -176,18 +182,18 @@
 
 										
 										<div class="field">
-											<label for="department"><h3>Você possui certa dificuldade em contar dinheiro (exemplo: dificuldade em saber se recebeu corretamente o troco de uma compra)?</h3></label>
+											<label for="department" value="quest8"><h3>Você possui certa dificuldade em contar dinheiro (exemplo: dificuldade em saber se recebeu corretamente o troco de uma compra)?</h3></label>
 										</div>
 										<div class="field quarter" style="visibility:hidden;">
 											<input type="radio" />
 											<label>-</label>
 										</div>
 										<div class="field quarter">
-											<input type="radio" id="txtq8_s" name="txtq8" required />
+											<input type="radio" value="sim" id="txtq8_s" name="txtq8" required />
 											<label for="txtq8_s">Sim</label>
 										</div>
 										<div class="field quarter">
-											<input type="radio" id="txtq8_n" name="txtq8" />
+											<input type="radio" value="não" id="txtq8_n" name="txtq8" />
 											<label for="txtq8_n">Não </label>
 										</div>
 										<div class="field quarter" style="visibility:hidden;">
@@ -212,8 +218,8 @@
 					<footer class="wrapper style1 align-center">
 						<div class="inner">
 							<ul class="icons">
-								<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://linktr.ee/TccPesquisa" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+								
 							</ul>
 							<p>&copy; TCC Pesquisa - IFRJ - Arraial do Cabo. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 						</div>
