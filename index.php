@@ -34,7 +34,7 @@
 			<!-- One -->
 			<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 				<div class="content">
-					<h1>Participe da nossa pesquisa</h1>
+					<h1>Participe da nossa pesquisa1</h1>
 					<p class="major">Nós do  <a href="https://portal.ifrj.edu.br/" target="_blank">IFRJ - Campus Arraial do Cabo</a>, como parte do nosso trabalho de TCC estamos realizando uma pesquisa censitária sobre a taxa de analfabetismo no município de Arraial do Cabo. Analfabetos funcionais são pessoas que, embora saibam reconhecer letras e números, são incapazes de compreender textos simples, assim como realizar operações básicas de matemática.</p>
 					<ul class="actions stacked">
 						<li><a href="#mainform" class="button big wide smooth-scroll-middle">Responder agora!</a></li>
